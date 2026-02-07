@@ -9,7 +9,11 @@ class DoctorsScreen extends StatefulWidget {
   State<DoctorsScreen> createState() => _DoctorsScreenState();
 }
 
-
+class _DoctorsScreenState extends State<DoctorsScreen> {
+  final ApiService _apiService = ApiService();
+  bool _isLoading = true;
+  List<dynamic> _doctors = [];
+  String? _error;
 
   @override
   void initState() {
