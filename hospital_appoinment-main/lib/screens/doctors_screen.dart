@@ -52,12 +52,7 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
     final TextEditingController feeController = TextEditingController(
         text: doctor?['consultation_fee']?.toString() ?? '');
 
-    List<dynamic> users = [];
-    List<dynamic> depts = [];
-    int? selectedUserId = doctor?['user_id'];
-    int? selectedDeptId = doctor?['department_id'];
-    bool dialogLoading = true;
-    String? currentUserEmail;
+   
 
     // Get logged-in user info if adding new doctor
     if (!isEdit) {
